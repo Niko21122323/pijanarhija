@@ -1,26 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.cdnfonts.com/css/gill-sans-nova-cond-ultra-bold");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+	--color-body: #808080;
+	--color-accent: #ca3d2b;
+	--color-dark: #1d1d1b;
+	--color-light-100: #fafafa;
+	--color-light-200: #f6f7f2;
+	--color-light-300: #f0f0f0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Gill Sans Nova Cond Ultra Bold", sans-serif;
+	line-height: 1;
 }
