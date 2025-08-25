@@ -87,19 +87,15 @@ const CharactersSection = () => {
 	// Update navigation buttons when swiper instance is ready
 	useEffect(() => {
 		if (swiperInstance && prevRef.current && nextRef.current) {
-			// Type assertion to access params and navigation
+			// Use the official Swiper API to update navigation
 			const swiper = swiperInstance as any;
 
-			// Initialize navigation params if they don't exist
-			if (!swiper.params.navigation) {
-				swiper.params.navigation = {};
-			}
-
-			swiper.params.navigation.prevEl = prevRef.current;
-			swiper.params.navigation.nextEl = nextRef.current;
-
-			// Check if navigation module exists before calling methods
+			// Check if navigation module exists and update references
 			if (swiper.navigation) {
+				// Destroy existing navigation first
+				swiper.navigation.destroy();
+
+				// Re-initialize with new elements
 				swiper.navigation.init();
 				swiper.navigation.update();
 			}
