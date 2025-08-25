@@ -1,0 +1,172 @@
+"use client";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import { EffectCards, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import card1 from "../public/assets/card-1.png";
+import card2 from "../public/assets/card-2.png";
+import card3 from "../public/assets/card-3.png";
+import card4 from "../public/assets/card-4.png";
+import card5 from "../public/assets/card-5.png";
+import card6 from "../public/assets/card-6.png";
+import card7 from "../public/assets/card-7.png";
+import card8 from "../public/assets/card-empty.png";
+import patternBottom from "../public/assets/pattern-2-bottom.svg";
+import patternTop from "../public/assets/pattern-2-top.webp";
+import swiperIcon from "../public/assets/swipe-icon.svg";
+
+const cards = [card1, card2, card3, card4, card5, card6, card7, card8];
+
+const CharactersSection = () => {
+	const [swiperConfig, setSwiperConfig] = useState({
+		slidesPerView: 3,
+		cardEffects: {
+			rotate: false,
+			perSlideOffset: 80,
+			perSlideRotate: 0,
+			slideShadows: false,
+		},
+	});
+
+	const [screenSize, setScreenSize] = useState("desktop");
+	const prevRef = useRef(null);
+	const nextRef = useRef(null);
+	const [swiperInstance, setSwiperInstance] = useState(null);
+
+	useEffect(() => {
+		const updateSwiperConfig = () => {
+			const width = window.innerWidth;
+
+			if (width < 640) {
+				// Mobile
+				setScreenSize("mobile");
+				setSwiperConfig({
+					slidesPerView: 1.5,
+					cardEffects: {
+						rotate: false,
+						perSlideOffset: 20,
+						perSlideRotate: 0,
+						slideShadows: false,
+					},
+				});
+			} else if (width < 1024) {
+				// Tablet
+				setScreenSize("tablet");
+				setSwiperConfig({
+					slidesPerView: 2,
+					cardEffects: {
+						rotate: false,
+						perSlideOffset: 40,
+						perSlideRotate: 0,
+						slideShadows: false,
+					},
+				});
+			} else {
+				// Desktop
+				setScreenSize("desktop");
+				setSwiperConfig({
+					slidesPerView: 3,
+					cardEffects: {
+						rotate: false,
+						perSlideOffset: 80,
+						perSlideRotate: 0,
+						slideShadows: false,
+					},
+				});
+			}
+		};
+
+		updateSwiperConfig();
+		window.addEventListener("resize", updateSwiperConfig);
+
+		return () => window.removeEventListener("resize", updateSwiperConfig);
+	}, []);
+
+	// Update navigation buttons when swiper instance is ready
+	useEffect(() => {
+		if (swiperInstance) {
+			swiperInstance.params.navigation.prevEl = prevRef.current;
+			swiperInstance.params.navigation.nextEl = nextRef.current;
+			swiperInstance.navigation.init();
+			swiperInstance.navigation.update();
+		}
+	}, [swiperInstance]);
+
+	return (
+		<section className="relative overflow-hidden bg-accent">
+			<div className="absolute top-0 left-0 w-[350%] md:w-full h-auto">
+				<Image src={patternTop} alt="icon" className="h-auto w-full" />
+			</div>
+			<div className="absolute bottom-0 left-0 w-[250%] md:w-full h-auto">
+				<Image src={patternBottom} alt="icon" className="h-auto w-full" />
+			</div>
+			<div className="container mx-auto px-4 lg:px-6">
+				<div className="py-[200px] lg:py-[300px] 2xl:py-[350px] max-w-[1200px] mx-auto">
+					<div className="flex flex-col items-center justify-center pb-12 lg:pb-14">
+						<h2 className="text-light-100 text-[40px] md:text-5xl xl:text-[60px] text-center uppercase pb-5 max-sm:max-w-[322px]">
+							Запознај ги Карактерите
+						</h2>
+						<p className="text-light-300 text-center max-w-[322px] sm:max-w-[586px]">
+							Сите ги знаеш. Некои ги сакаш. Некои ги избегнуваш. Сега време е
+							да се соочиш со нив, со карти на маса и чаша во рака.
+						</p>
+					</div>
+					<div className="relative">
+						<Swiper
+							key={screenSize}
+							slidesPerView={swiperConfig.slidesPerView}
+							effect={"cards"}
+							loop={true}
+							centeredSlides={true}
+							modules={[EffectCards, Navigation]}
+							cardsEffect={swiperConfig.cardEffects}
+							navigation={{
+								prevEl: prevRef.current,
+								nextEl: nextRef.current,
+							}}
+							onSwiper={setSwiperInstance}
+							className="cardsSwiper"
+						>
+							{cards.map((card) => (
+								<SwiperSlide key={card.src} className="!h-auto group">
+									<div className="h-full scale-90 opacity-0 group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:scale-100 group-[.swiper-slide-prev]:opacity-50 group-[.swiper-slide-prev]:scale-90 group-[.swiper-slide-next]:opacity-50 group-[.swiper-slide-next]:scale-90 transition-all duration-300 ease-in-out">
+										<Image
+											src={card}
+											alt="card image"
+											className="h-full w-full"
+										/>
+									</div>
+								</SwiperSlide>
+							))}
+						</Swiper>
+
+						<button
+							type="button"
+							ref={prevRef}
+							className="max-lg:hidden absolute left-10 top-1/2 -translate-y-1/2 z-10 size-16 flex items-center justify-center rounded-full border border-white bg-transparent hover:bg-white transition-colors duration-300 ease-in-out cursor-pointer group"
+							aria-label="Previous slide"
+						>
+							<FaArrowLeft className="group-hover:text-accent transition-colors duration-300 ease-in-out text-light-100 text-xl" />
+						</button>
+
+						<button
+							type="button"
+							ref={nextRef}
+							className="max-lg:hidden absolute right-10 top-1/2 -translate-y-1/2 z-10 size-16 flex items-center justify-center rounded-full border border-white bg-transparent hover:bg-white transition-colors duration-300 ease-in-out cursor-pointer group"
+							aria-label="Next slide"
+						>
+							<FaArrowRight className="group-hover:text-accent transition-colors duration-300 ease-in-out text-light-100 text-xl" />
+						</button>
+
+						<div className="flex items-center justify-center mt-6 lg:hidden">
+							<Image src={swiperIcon} alt="icon" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
+
+export default CharactersSection;
