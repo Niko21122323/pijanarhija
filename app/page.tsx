@@ -2,6 +2,7 @@ import AboutSection from "@/components/AboutSection";
 import CharactersSection from "@/components/CharactersSection";
 import HeroSection from "@/components/HeroSection";
 import HowToPlaySection from "@/components/HowToPlaySection";
+import InfoSection from "@/components/InfoSection";
 import WhatYouGet from "@/components/WhatYouGet";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
 			<CharactersSection />
 			<HowToPlaySection />
 			<WhatYouGet />
-			<section className=""></section>
+			<InfoSection />
 		</main>
 	);
 }
