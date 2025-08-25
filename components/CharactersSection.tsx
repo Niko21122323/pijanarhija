@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+import type { Swiper as SwiperType } from "swiper";
 import { EffectCards, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import card1 from "../public/assets/card-1.png";
@@ -30,9 +31,9 @@ const CharactersSection = () => {
 	});
 
 	const [screenSize, setScreenSize] = useState("desktop");
-	const prevRef = useRef(null);
-	const nextRef = useRef(null);
-	const [swiperInstance, setSwiperInstance] = useState(null);
+	const prevRef = useRef<HTMLButtonElement>(null);
+	const nextRef = useRef<HTMLButtonElement>(null);
+	const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
 
 	useEffect(() => {
 		const updateSwiperConfig = () => {
@@ -85,11 +86,23 @@ const CharactersSection = () => {
 
 	// Update navigation buttons when swiper instance is ready
 	useEffect(() => {
-		if (swiperInstance) {
-			swiperInstance.params.navigation.prevEl = prevRef.current;
-			swiperInstance.params.navigation.nextEl = nextRef.current;
-			swiperInstance.navigation.init();
-			swiperInstance.navigation.update();
+		if (swiperInstance && prevRef.current && nextRef.current) {
+			// Type assertion to access params and navigation
+			const swiper = swiperInstance as any;
+
+			// Initialize navigation params if they don't exist
+			if (!swiper.params.navigation) {
+				swiper.params.navigation = {};
+			}
+
+			swiper.params.navigation.prevEl = prevRef.current;
+			swiper.params.navigation.nextEl = nextRef.current;
+
+			// Check if navigation module exists before calling methods
+			if (swiper.navigation) {
+				swiper.navigation.init();
+				swiper.navigation.update();
+			}
 		}
 	}, [swiperInstance]);
 
