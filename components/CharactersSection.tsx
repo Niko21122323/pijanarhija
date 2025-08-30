@@ -83,18 +83,6 @@ const CharactersSection = () => {
 		return () => window.removeEventListener("resize", updateSwiperConfig);
 	}, []);
 
-	useEffect(() => {
-		if (swiperInstance && prevRef.current && nextRef.current) {
-			const swiper = swiperInstance as any;
-
-			if (swiper.navigation) {
-				swiper.navigation.destroy();
-				swiper.navigation.init();
-				swiper.navigation.update();
-			}
-		}
-	}, [swiperInstance]);
-
 	return (
 		<section className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
