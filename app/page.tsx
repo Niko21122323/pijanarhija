@@ -1,6 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import CharactersSection from "@/components/CharactersSection";
 import ContactSection from "@/components/ContactSection";
+import FaqSection from "@/components/FaqSection";
 import HeroSection from "@/components/HeroSection";
 import HowToPlaySection from "@/components/HowToPlaySection";
 import InfoSection from "@/components/InfoSection";
@@ -16,6 +17,7 @@ export default function Home() {
 			<WhatYouGet />
 			<InfoSection />
 			<ContactSection />
+			<FaqSection />
 		</main>
 	);
 }
