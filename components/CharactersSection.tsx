@@ -14,8 +14,6 @@ import card5 from "../public/assets/card-5.png";
 import card6 from "../public/assets/card-6.png";
 import card7 from "../public/assets/card-7.png";
 import card8 from "../public/assets/card-empty.png";
-import patternBottom from "../public/assets/pattern-2-bottom.svg";
-import patternTop from "../public/assets/pattern-2-top.webp";
 import swiperIcon from "../public/assets/swipe-icon.svg";
 
 const cards = [card1, card2, card3, card4, card5, card6, card7, card8];
@@ -85,18 +83,12 @@ const CharactersSection = () => {
 		return () => window.removeEventListener("resize", updateSwiperConfig);
 	}, []);
 
-	// Update navigation buttons when swiper instance is ready
 	useEffect(() => {
 		if (swiperInstance && prevRef.current && nextRef.current) {
-			// Use the official Swiper API to update navigation
 			const swiper = swiperInstance as any;
 
-			// Check if navigation module exists and update references
 			if (swiper.navigation) {
-				// Destroy existing navigation first
 				swiper.navigation.destroy();
-
-				// Re-initialize with new elements
 				swiper.navigation.init();
 				swiper.navigation.update();
 			}
@@ -104,15 +96,9 @@ const CharactersSection = () => {
 	}, [swiperInstance]);
 
 	return (
-		<section className="relative overflow-hidden bg-accent">
-			<div className="absolute top-0 left-0 w-[350%] md:w-full h-auto">
-				<Image src={patternTop} alt="icon" className="h-auto w-full" />
-			</div>
-			<div className="absolute bottom-0 left-0 w-[250%] md:w-full h-auto">
-				<Image src={patternBottom} alt="icon" className="h-auto w-full" />
-			</div>
+		<section className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
-				<div className="py-[200px] lg:py-[300px] 2xl:py-[350px] max-w-[1200px] mx-auto">
+				<div className="max-w-[1200px] mx-auto">
 					<div className="flex flex-col items-center justify-center pb-12 lg:pb-14">
 						<h2 className="text-light-100 text-[40px] md:text-5xl xl:text-[60px] text-center uppercase pb-5 max-sm:max-w-[322px]">
 							Запознај ги Карактерите

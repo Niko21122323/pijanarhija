@@ -26,7 +26,7 @@ const aboutData: AboutData[] = [
 
 const AboutSection = () => {
 	return (
-		<section className="sm:py-16 md:py-28 xl:py-32">
+		<section className="py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
 				<div className="grid lg:grid-cols-2 xl:grid-cols-11 gap-[67px] lg:gap-2 items-center">
 					<div className="xl:col-span-5">

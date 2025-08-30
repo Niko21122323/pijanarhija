@@ -45,7 +45,7 @@ const FaqSection = () => {
 	);
 
 	const toggleAccordion = (id: number) => {
-		setOpenAccordion(openAccordion === id ? null : id);
+		setOpenAccordion(id);
 	};
 
 	return (

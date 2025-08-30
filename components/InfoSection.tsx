@@ -35,7 +35,7 @@ const priceData: InfoProps[] = [
 
 const InfoSection = () => {
 	return (
-		<section className="py-10">
+		<section className="py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 max-w-[1200px] mx-auto">
 					<div className="lg:pr-16 xl:pr-[92px] lg:border-r lg:border-dark">

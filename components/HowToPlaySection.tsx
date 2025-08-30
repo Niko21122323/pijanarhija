@@ -29,7 +29,7 @@ const howToPlayData: HowToPlay[] = [
 
 const HowToPlaySection = () => {
 	return (
-		<section className="sm:pt-16">
+		<section className="py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
 				<div className="">
 					<h2 className="uppercase text-dark text-[40px] md:text-5xl xl:text-[60px] pb-10 lg:pb-20 max-w-[383px]">

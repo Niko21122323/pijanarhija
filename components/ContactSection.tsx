@@ -1,11 +1,9 @@
 import Image from "next/image";
 import contactImage from "../public/assets/constact-image.png";
-import patternBottom from "../public/assets/pattern-4-bottom.svg";
-import patternTop from "../public/assets/pattern-4-top.svg";
 
 const ContactSection = () => {
 	return (
-		<section className="relative overflow-hidden bg-accent py-[200px] md:py-[250px] lg:py-[300px] 2xl:py-[370px]">
+		<section className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
 				<ul className="list-disc flex flex-col gap-1 pl-6 lg:hidden pb-8">
 					<li className="text-light-100 text-base sm:text-lg">Само 690 ден.</li>
@@ -148,17 +146,6 @@ const ContactSection = () => {
 						</form>
 					</div>
 				</div>
-			</div>
-
-			<div className="absolute top-0 2xl:-top-[10%] left-0 w-full h-auto">
-				<Image src={patternTop} alt="pattern icon" className="w-full h-auto" />
-			</div>
-			<div className="absolute bottom-0 2xl:-bottom-[10%] left-0 w-full h-auto">
-				<Image
-					src={patternBottom}
-					alt="pattern icon"
-					className="w-full h-auto"
-				/>
 			</div>
 		</section>
 	);

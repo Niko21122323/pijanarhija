@@ -1,7 +1,5 @@
 import Image from "next/image";
 import checkIcon from "../public/assets/check.svg";
-import patternbottom from "../public/assets/pattern-3-bottom.svg";
-import patternTop from "../public/assets/pattern-3-top.svg";
 import whatYouGetImage from "../public/assets/what-you-get-image.webp";
 
 interface WhatYouGet {
@@ -30,7 +28,7 @@ const whatYouGetData: WhatYouGet[] = [
 
 const WhatYouGet = () => {
 	return (
-		<section className="relative overflow-hidden bg-accent pb-[150px] sm:pb-[200px] lg:pb-[250px] 2xl:pb-[350px] pt-[250px] sm:pt-[300px] lg:pt-[350px] 2xl:pt-[500px]">
+		<section className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36">
 			<div className="container mx-auto px-4 lg:px-6">
 				<div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10">
 					<div className="lg:col-span-5">
@@ -54,13 +52,6 @@ const WhatYouGet = () => {
 						/>
 					</div>
 				</div>
-			</div>
-
-			<div className="absolute -top-5 left-0 w-full h-auto max-sm:w-[190%] max-md:w-[150%] max-lg:w-[130%]">
-				<Image src={patternTop} alt="icon" className="h-auto w-full" />
-			</div>
-			<div className="absolute bottom-0 left-0 w-full h-auto max-md:w-[150%] max-lg:w-[130%]">
-				<Image src={patternbottom} alt="icon" className="h-auto w-full" />
 			</div>
 		</section>
 	);
