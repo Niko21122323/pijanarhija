@@ -45,7 +45,7 @@ const Footer = () => {
 						</p>
 
 						<div className="w-fit pt-8">
-							<Button text="Нарачај Сега!" link="#contact" />
+							<Button text="Нарачај Сега!" link="#контакт" />
 						</div>
 					</div>
 					<div className="flex flex-col gap-12">

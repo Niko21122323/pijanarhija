@@ -21,7 +21,7 @@ const HeroSection = () => {
 							македонската култура!
 						</span>
 						<div className="w-fit pt-5 sm:pt-8 xl:pt-10">
-							<Button text="Нарачај Сега!" link="#contact" />
+							<Button text="Нарачај Сега!" link="#контакт" />
 						</div>
 						<div className="mt-4 lg:pl-4">
 							<Image src={shippingText2} alt="icon" />
@@ -57,6 +57,8 @@ const HeroSection = () => {
 					src={heroBg}
 					alt="hero image"
 					className="h-full w-full object-cover"
+					priority
+					placeholder="blur"
 				/>
 			</div>
 		</section>

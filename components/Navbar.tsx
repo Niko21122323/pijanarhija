@@ -115,7 +115,7 @@ const Navbar = () => {
 								</div>
 							))}
 							<div className="w-fit">
-								<Button text="Нарачај Сега!" link="#contact" />
+								<Button text="Нарачај Сега!" link="контакт" />
 							</div>
 						</div>
 
