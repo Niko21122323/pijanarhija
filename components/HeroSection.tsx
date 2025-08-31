@@ -9,6 +9,7 @@ import patternHero from "../public/assets/pattern-hero.svg";
 import patternHeroMobile from "../public/assets/pattern-hero-mobile.svg";
 import Animations from "./Animations";
 import Button from "./Button";
+import ImageAnimations from "./ImageAnimations";
 
 const HeroSection = () => {
   return (
@@ -38,11 +39,13 @@ const HeroSection = () => {
             </Animations>
           </div>
           <div className="col-span-6 xl:col-span-7 max-lg:hidden h-full w-full">
-            <Image
-              src={heroImg}
-              alt="image of a girl drinking bear"
-              className="max-xl:h-full max-xl:w-full max-w-[700px]"
-            />
+            <ImageAnimations>
+              <Image
+                src={heroImg}
+                alt="image of a girl drinking bear"
+                className="max-xl:h-full max-xl:w-full max-w-[700px]"
+              />
+            </ImageAnimations>
           </div>
         </div>
         <div className="absolute tight-4 lg:right-10 top-32 max-lg:hidden">

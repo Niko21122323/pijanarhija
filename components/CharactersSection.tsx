@@ -16,6 +16,7 @@ import card8 from "../public/assets/cards/8.png";
 import card9 from "../public/assets/cards/9.png";
 import swiperIcon from "../public/assets/swipe-icon.svg";
 import Animations from "./Animations";
+import ImageAnimations from "./ImageAnimations";
 
 const cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
 
@@ -119,11 +120,13 @@ const CharactersSection = () => {
               {cards.map((card) => (
                 <SwiperSlide key={card.src} className="!h-auto group">
                   <div className="h-full scale-90 opacity-0 group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:scale-100 group-[.swiper-slide-prev]:opacity-50 group-[.swiper-slide-prev]:scale-90 group-[.swiper-slide-next]:opacity-50 group-[.swiper-slide-next]:scale-90 transition-all duration-300 ease-in-out">
-                    <Image
-                      src={card}
-                      alt="card image"
-                      className="h-full w-full"
-                    />
+                    <ImageAnimations>
+                      <Image
+                        src={card}
+                        alt="card image"
+                        className="h-full w-full"
+                      />
+                    </ImageAnimations>
                   </div>
                 </SwiperSlide>
               ))}

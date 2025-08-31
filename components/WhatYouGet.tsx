@@ -3,6 +3,7 @@ import checkIcon from "../public/assets/check.svg";
 import whatYouGetImage from "../public/assets/what-you-get.webp";
 import whatYouGetMobile from "../public/assets/what-you-get-mobile.webp";
 import Animations from "./Animations";
+import ImageAnimations from "./ImageAnimations";
 
 interface WhatYouGet {
   text: string;
@@ -53,16 +54,20 @@ const WhatYouGet = () => {
             </div>
           </div>
           <div className="lg:col-span-7">
-            <Image
-              src={whatYouGetImage}
-              alt="image of the cards"
-              className="w-full h-auto max-lg:hidden"
-            />
-            <Image
-              src={whatYouGetMobile}
-              alt="image of the cards"
-              className="w-full h-auto lg:hidden"
-            />
+            <ImageAnimations>
+              <Image
+                src={whatYouGetImage}
+                alt="image of the cards"
+                className="w-full h-auto max-lg:hidden"
+              />
+            </ImageAnimations>
+            <ImageAnimations>
+              <Image
+                src={whatYouGetMobile}
+                alt="image of the cards"
+                className="w-full h-auto lg:hidden"
+              />
+            </ImageAnimations>
           </div>
         </div>
       </div>

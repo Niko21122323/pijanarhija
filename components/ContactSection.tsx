@@ -1,6 +1,7 @@
 import Image from "next/image";
 import contactImage from "../public/assets/constact-image.png";
 import Animations from "./Animations";
+import ImageAnimations from "./ImageAnimations";
 
 const ContactSection = () => {
   return (
@@ -25,11 +26,13 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 bg-light-100 lg:rounded-xl px-5 md:px-10 py-9 md:py-14">
           <div className="relative h-full w-full overflow-hidden rounded-lg max-lg:hidden">
-            <Image
-              src={contactImage}
-              alt="contact image"
-              className="h-full w-full object-cover"
-            />
+            <ImageAnimations>
+              <Image
+                src={contactImage}
+                alt="contact image"
+                className="h-full w-full object-cover"
+              />
+            </ImageAnimations>
 
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full">
               <ul className="list-disc flex flex-col gap-1 pl-10 xl:pl-20">

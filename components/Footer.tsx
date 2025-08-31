@@ -4,6 +4,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import logo from "../public/assets/logo.png";
 import Button from "./Button";
 import Animations from "./Animations";
+import ImageAnimations from "./ImageAnimations";
 
 const footerLinks = [
   {
@@ -39,8 +40,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-6 py-16 md:py-24 lg:py-36">
         <div className="flex flex-col md:flex-row items-start md:justify-between gap-10">
           <div className="">
-            <Animations delay={0.3}>
+            <ImageAnimations>
               <Image src={logo} alt="company logo" />
+            </ImageAnimations>
+            <Animations delay={0.3}>
               <p className="pt-4 text-white/80 max-w-[500px]">
                 Бесплатна достава до врата за 1-5 работни дена. Исплатата се
                 врши на рака кога ке ви стигне нарачката.

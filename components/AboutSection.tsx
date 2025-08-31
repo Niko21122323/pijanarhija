@@ -2,6 +2,7 @@ import Image from "next/image";
 import aboutImage from "../public/assets/about-image.webp";
 import aboutText from "../public/assets/about-the-game-text.svg";
 import Animations from "./Animations";
+import ImageAnimations from "./ImageAnimations";
 
 interface AboutData {
   id: number;
@@ -36,7 +37,9 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 xl:grid-cols-11 gap-[67px] lg:gap-2 items-center">
           <div className="xl:col-span-5">
-            <Image src={aboutImage} alt="deck of cards" />
+            <ImageAnimations>
+              <Image src={aboutImage} alt="deck of cards" />
+            </ImageAnimations>
           </div>
           <div className="relative xl:col-span-6 flex flex-col gap-6 xl:gap-8">
             <div className="lg:absolute lg:-top-10 lg:-left-12">
