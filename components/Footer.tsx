@@ -90,10 +90,10 @@ const Footer = () => {
 							</div>
 
 							<Link
-								href="mailto:"
+								href="mailto:pijanarhija@gmail.com"
 								className="text-base sm:text-lg text-white/80 hover:text-white font-semibold transition-colors duration-300 ease-in-out"
 							>
-								email@example.com
+								pijanarhija@gmail.com
 							</Link>
 						</div>
 					</div>
