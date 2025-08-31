@@ -11,6 +11,10 @@
 	--color-light-300: #f0f0f0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: "Nunito", sans-serif;
 }

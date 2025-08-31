@@ -3,7 +3,10 @@ import contactImage from "../public/assets/constact-image.png";
 
 const ContactSection = () => {
 	return (
-		<section className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36">
+		<section
+			className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36"
+			id="контакт"
+		>
 			<div className="container mx-auto px-4 lg:px-6">
 				<ul className="list-disc flex flex-col gap-1 pl-6 lg:hidden pb-8">
 					<li className="text-light-100 text-base sm:text-lg">Само 690 ден.</li>

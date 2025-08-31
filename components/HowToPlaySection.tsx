@@ -33,7 +33,7 @@ const howToPlayData: HowToPlay[] = [
 
 const HowToPlaySection = () => {
 	return (
-		<section className="py-16 md:py-24 lg:py-36">
+		<section className="py-16 md:py-24 lg:py-36" id="како-се-игра">
 			<div className="container mx-auto px-4 lg:px-6">
 				<div className="relative lg:w-fit">
 					<h2 className="uppercase text-dark text-[40px] md:text-5xl xl:text-[60px] max-w-[383px]">

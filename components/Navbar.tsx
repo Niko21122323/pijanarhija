@@ -54,13 +54,29 @@ const Navbar = () => {
 	const navLink = [
 		{
 			id: 1,
-			href: "/",
+			href: "#за-играта",
 			label: "За Играта",
 		},
-		{ id: 2, href: "#", label: "Карактери" },
-		{ id: 3, href: "#", label: "Како се Игра" },
-		{ id: 4, href: "#", label: "Цена и Достава" },
-		{ id: 5, href: "#", label: "Контакт" },
+		{
+			id: 2,
+			href: "#карактери",
+			label: "Карактери",
+		},
+		{
+			id: 3,
+			href: "#како-се-игра",
+			label: "Како се Игра",
+		},
+		{
+			id: 4,
+			href: "#цена-и-достава",
+			label: "Цена и Достава",
+		},
+		{
+			id: 5,
+			href: "#контакт",
+			label: "Контакт",
+		},
 	];
 
 	if (!isInitialized) {

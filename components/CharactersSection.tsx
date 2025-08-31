@@ -83,7 +83,10 @@ const CharactersSection = () => {
 	}, []);
 
 	return (
-		<section className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36">
+		<section
+			className="relative overflow-hidden bg-accent py-16 md:py-24 lg:py-36"
+			id="карактери"
+		>
 			<div className="container mx-auto px-4 lg:px-6">
 				<div className="max-w-[1200px] mx-auto">
 					<div className="flex flex-col items-center justify-center pb-12 lg:pb-14">

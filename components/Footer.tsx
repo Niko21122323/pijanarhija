@@ -8,27 +8,27 @@ const footerLinks = [
 	{
 		id: 1,
 		label: "За Играта",
-		link: "",
+		link: "#за-играта",
 	},
 	{
 		id: 2,
 		label: "Карактери",
-		link: "",
+		link: "#карактери",
 	},
 	{
 		id: 3,
 		label: "Како се Игра",
-		link: "",
+		link: "#како-се-игра",
 	},
 	{
 		id: 4,
 		label: "Цена и Достава",
-		link: "",
+		link: "#цена-и-достава",
 	},
 	{
 		id: 5,
-		label: "Цена и Достава",
-		link: "#contact",
+		label: "Контакт",
+		link: "#контакт",
 	},
 ];
 
