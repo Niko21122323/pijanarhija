@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-import type { Swiper as SwiperType } from "swiper";
 import { EffectCards, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import card1 from "../public/assets/cards/1.png";
@@ -33,9 +32,6 @@ const CharactersSection = () => {
 	const [screenSize, setScreenSize] = useState("desktop");
 	const prevRef = useRef<HTMLButtonElement>(null);
 	const nextRef = useRef<HTMLButtonElement>(null);
-	const [_swiperInstance, setSwiperInstance] = useState<SwiperType | null>(
-		null,
-	);
 
 	useEffect(() => {
 		const updateSwiperConfig = () => {
@@ -113,7 +109,6 @@ const CharactersSection = () => {
 								prevEl: prevRef.current,
 								nextEl: nextRef.current,
 							}}
-							onSwiper={setSwiperInstance}
 							className="cardsSwiper"
 						>
 							{cards.map((card) => (

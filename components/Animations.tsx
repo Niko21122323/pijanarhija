@@ -18,9 +18,9 @@ const Animations = ({
 	animateOnScroll = true,
 	delay = 0,
 }: AnimationsProps) => {
-	const containerRef = useRef(null);
+	const containerRef = useRef<HTMLElement>(null);
 	const elementRef = useRef<HTMLElement[]>([]);
-	const splitRef = useRef<any[]>([]);
+	const splitRef = useRef<SplitText[]>([]);
 	const lines = useRef<HTMLElement[]>([]);
 	const [isReady, setIsReady] = useState(false);
 
@@ -40,9 +40,11 @@ const Animations = ({
 			lines.current = [];
 
 			let elements: HTMLElement[] = [];
-			if (containerRef.current.hasAttribute("data-copy-wrapper")) {
-				elements = Array.from(containerRef.current.children) as HTMLElement[];
-			} else {
+			if (containerRef.current?.hasAttribute("data-copy-wrapper")) {
+				elements = Array.from(containerRef.current.children).filter(
+					(child): child is HTMLElement => child instanceof HTMLElement,
+				);
+			} else if (containerRef.current) {
 				elements = [containerRef.current];
 			}
 
@@ -104,7 +106,7 @@ const Animations = ({
 		{ scope: containerRef, dependencies: [animateOnScroll, delay] },
 	);
 
-	if (React.Children.count(children) === 1) {
+	if (React.Children.count(children) === 1 && React.isValidElement(children)) {
 		return React.cloneElement(children, {
 			ref: containerRef,
 			style: { visibility: isReady ? "visible" : "hidden" },
