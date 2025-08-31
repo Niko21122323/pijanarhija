@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import heroBg from "../public/assets/home/hero-bg.webp";
 import heroImg from "../public/assets/home/hero-img.webp";
@@ -5,6 +7,7 @@ import shippingText1 from "../public/assets/home/shipping-icon-1.svg";
 import shippingText2 from "../public/assets/home/shipping-icon-2.svg";
 import patternHero from "../public/assets/pattern-hero.svg";
 import patternHeroMobile from "../public/assets/pattern-hero-mobile.svg";
+import Animations from "./Animations";
 import Button from "./Button";
 
 const HeroSection = () => {
@@ -13,9 +16,14 @@ const HeroSection = () => {
 			<div className="relative container mx-auto px-4 lg:px-6 z-10">
 				<div className="grid lg:grid-cols-12 gap-10 items-start pt-[166px]">
 					<div className="col-span-6 xl:col-span-5 lg:pt-20 pb-[200px] sm:pb-[160px] lg:pb-16 xl:pb-32 flex flex-col max-lg:items-center max-lg:justify-center">
-						<h1 className="text-white text-[40px] md:text-5xl xl:text-[64px] uppercase pb-5 sm:pb-6 xl:pb-8 lg:max-w-[590px] max-lg:text-center">
-							Хаос, забава и хумор. спакувано во една кутија!
-						</h1>
+						<Animations delay={0.5}>
+							<h1
+								className="text-white text-[40px] md:text-5xl xl:text-[64px] uppercase pb-5 sm:pb-6 xl:pb-8 lg:max-w-[590px] max-lg:text-center overflow-hidden"
+								id="heading"
+							>
+								Хаос, забава и хумор. спакувано во една кутија!
+							</h1>
+						</Animations>
 						<span className="text-base sm:text-lg xl:text-2xl text-light-300 font-medium max-lg:text-center">
 							Друштвена игра за пиење, инспирана од локалните стереотипи и
 							македонската култура!
