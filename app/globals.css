@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url("https://fonts.cdnfonts.com/css/gill-sans-nova-cond-ultra-bold");
+@import url("https://use.typekit.net/mgh5wjm.css");
 @import "tailwindcss";
 
 @theme {
 	--color-body: #808080;
-	--color-accent: #ca3d2b;
+	--color-accent: #b12a25;
 	--color-dark: #1d1d1b;
 	--color-light-100: #fafafa;
 	--color-light-200: #f6f7f2;
@@ -25,8 +25,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Gill Sans Nova Cond Ultra Bold", sans-serif;
-	line-height: 1;
+	font-family: "gill-sans-nova-condensed", sans-serif;
+	font-weight: 900;
 }
 
 p {
