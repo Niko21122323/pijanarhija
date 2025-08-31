@@ -26,13 +26,17 @@ const HeroSection = () => {
               </h1>
             </Animations>
             <Animations delay={0.7}>
-              <span className="text-base sm:text-lg xl:text-2xl text-light-300 font-medium max-lg:text-center">
+              <span className="text-base sm:text-lg xl:text-2xl text-light-300 font-medium max-lg:text-center max-lg:max-w-[400px]">
                 Друштвена игра за пиење, инспирана од локалните стереотипи и
                 македонската култура!
               </span>
+            </Animations>
+            <Animations delay={0.7}>
               <div className="w-fit pt-8 xl:pt-10">
                 <Button text="Нарачај Сега!" link="#контакт" />
               </div>
+            </Animations>
+            <Animations delay={0.7}>
               <div className="mt-4 lg:pl-4">
                 <Image src={shippingText2} alt="icon" />
               </div>
