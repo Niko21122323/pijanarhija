@@ -67,7 +67,7 @@ const Animations = ({
 					element.style.textIndent = "0";
 				}
 
-				lines.current.push(...split.lines);
+				lines.current.push(...(split.lines as HTMLElement[]));
 			});
 
 			// Set initial state and make visible
