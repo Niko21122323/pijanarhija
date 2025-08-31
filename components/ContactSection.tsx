@@ -26,7 +26,7 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 bg-light-100 lg:rounded-xl px-5 md:px-10 py-9 md:py-14">
           <div className="relative h-full w-full overflow-hidden rounded-lg max-lg:hidden">
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image
                 src={contactImage}
                 alt="contact image"

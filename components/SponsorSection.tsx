@@ -9,7 +9,7 @@ const SponsorSection = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-12 max-lg:items-center gap-10 lg:gap-16 max-w-[800px] mx-auto">
           <div className="lg:col-span-4 order-2 lg:order-1 flex items-center justify-center">
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image
                 src={sponsorLogo}
                 alt="sponsor Logo"

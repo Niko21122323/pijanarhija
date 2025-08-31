@@ -39,7 +39,7 @@ const HeroSection = () => {
             </Animations>
           </div>
           <div className="col-span-6 xl:col-span-7 max-lg:hidden h-full w-full">
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image
                 src={heroImg}
                 alt="image of a girl drinking bear"

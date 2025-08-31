@@ -40,7 +40,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-6 py-16 md:py-24 lg:py-36">
         <div className="flex flex-col md:flex-row items-start md:justify-between gap-10">
           <div className="">
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image src={logo} alt="company logo" />
             </ImageAnimations>
             <Animations delay={0.3}>

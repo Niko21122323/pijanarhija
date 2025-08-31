@@ -37,7 +37,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 xl:grid-cols-11 gap-[67px] lg:gap-2 items-center">
           <div className="xl:col-span-5">
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image src={aboutImage} alt="deck of cards" />
             </ImageAnimations>
           </div>

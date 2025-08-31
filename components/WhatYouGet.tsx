@@ -54,14 +54,14 @@ const WhatYouGet = () => {
             </div>
           </div>
           <div className="lg:col-span-7">
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image
                 src={whatYouGetImage}
                 alt="image of the cards"
                 className="w-full h-auto max-lg:hidden"
               />
             </ImageAnimations>
-            <ImageAnimations>
+            <ImageAnimations delay={0.3}>
               <Image
                 src={whatYouGetMobile}
                 alt="image of the cards"
