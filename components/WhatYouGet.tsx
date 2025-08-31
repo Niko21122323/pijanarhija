@@ -1,6 +1,7 @@
 import Image from "next/image";
 import checkIcon from "../public/assets/check.svg";
-import whatYouGetImage from "../public/assets/what-you-get-image.webp";
+import whatYouGetImage from "../public/assets/what-you-get.webp";
+import whatYouGetMobile from "../public/assets/what-you-get-mobile.webp";
 
 interface WhatYouGet {
 	text: string;
@@ -48,7 +49,12 @@ const WhatYouGet = () => {
 						<Image
 							src={whatYouGetImage}
 							alt="image of the cards"
-							className="w-full h-auto"
+							className="w-full h-auto max-lg:hidden"
+						/>
+						<Image
+							src={whatYouGetMobile}
+							alt="image of the cards"
+							className="w-full h-auto lg:hidden"
 						/>
 					</div>
 				</div>

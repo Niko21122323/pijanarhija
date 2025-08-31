@@ -1,5 +1,6 @@
 import Image from "next/image";
 import aboutImage from "../public/assets/about-image.webp";
+import aboutText from "../public/assets/about-the-game-text.svg";
 
 interface AboutData {
 	id: number;
@@ -32,7 +33,10 @@ const AboutSection = () => {
 					<div className="xl:col-span-5">
 						<Image src={aboutImage} alt="deck of cards" />
 					</div>
-					<div className="xl:col-span-6 flex flex-col gap-6 xl:gap-8">
+					<div className="relative xl:col-span-6 flex flex-col gap-6 xl:gap-8">
+						<div className="lg:absolute lg:-top-10 lg:-left-12">
+							<Image src={aboutText} alt="icon" />
+						</div>
 						{aboutData.map((data: AboutData) => (
 							<div key={data.id} className="">
 								<h3 className="text-dark text-4xl xl:text-[52px] uppercase pb-3">

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io5";
-import logo from "../public/assets/logo.png";
-import logoFooter from "../public/assets/logo-footer.svg";
+import logo from "../public/assets/logo.svg";
 import Button from "./Button";
 
 const footerLinks = [
@@ -39,7 +38,7 @@ const Footer = () => {
 			<div className="container mx-auto px-4 lg:px-6 py-16 md:py-24 lg:py-36">
 				<div className="flex flex-col md:flex-row items-start md:justify-between gap-10">
 					<div className="">
-						<Image src={logo} alt="company logo" />
+						<Image src={logo} alt="company logo" className="max-w-[200px]" />
 						<p className="pt-4 text-white/80 max-w-[500px]">
 							Бесплатна достава до врата за 1-5 работни дена. Исплатата се врши
 							на рака кога ке ви стигне нарачката.
@@ -71,9 +70,6 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="w-full">
-				<Image src={logoFooter} alt="company logo" className="h-auto w-full" />
 			</div>
 		</footer>
 	);

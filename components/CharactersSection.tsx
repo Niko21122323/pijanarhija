@@ -6,17 +6,18 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import type { Swiper as SwiperType } from "swiper";
 import { EffectCards, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import card1 from "../public/assets/card-1.png";
-import card2 from "../public/assets/card-2.png";
-import card3 from "../public/assets/card-3.png";
-import card4 from "../public/assets/card-4.png";
-import card5 from "../public/assets/card-5.png";
-import card6 from "../public/assets/card-6.png";
-import card7 from "../public/assets/card-7.png";
-import card8 from "../public/assets/card-empty.png";
+import card1 from "../public/assets/cards/1.png";
+import card2 from "../public/assets/cards/2.png";
+import card3 from "../public/assets/cards/3.png";
+import card4 from "../public/assets/cards/4.png";
+import card5 from "../public/assets/cards/5.png";
+import card6 from "../public/assets/cards/6.png";
+import card7 from "../public/assets/cards/7.png";
+import card8 from "../public/assets/cards/8.png";
+import card9 from "../public/assets/cards/9.png";
 import swiperIcon from "../public/assets/swipe-icon.svg";
 
-const cards = [card1, card2, card3, card4, card5, card6, card7, card8];
+const cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
 
 const CharactersSection = () => {
 	const [swiperConfig, setSwiperConfig] = useState({
@@ -39,7 +40,6 @@ const CharactersSection = () => {
 			const width = window.innerWidth;
 
 			if (width < 640) {
-				// Mobile
 				setScreenSize("mobile");
 				setSwiperConfig({
 					slidesPerView: 1.5,
@@ -51,7 +51,6 @@ const CharactersSection = () => {
 					},
 				});
 			} else if (width < 1024) {
-				// Tablet
 				setScreenSize("tablet");
 				setSwiperConfig({
 					slidesPerView: 2,

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
-import Logo from "../public/assets/logo.png";
+import Logo from "../public/assets/logo.svg";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -82,7 +82,7 @@ const Navbar = () => {
 							<Image
 								src={Logo}
 								alt="company logo"
-								className="max-xl:max-w-[200px] h-auto"
+								className="max-w-[150px] xl:max-w-[200px] h-auto"
 							/>
 						</Link>
 						<div className="flex items-center gap-6 xl:gap-12 max-lg:hidden">
@@ -99,7 +99,7 @@ const Navbar = () => {
 								</div>
 							))}
 							<div className="w-fit">
-								<Button text="Contact Us" link="/contact" />
+								<Button text="Нарачај Сега!" link="#contact" />
 							</div>
 						</div>
 
@@ -145,7 +145,7 @@ const Navbar = () => {
 					<Image
 						src={Logo}
 						alt="company logo"
-						className="h-auto max-w-[200px]"
+						className="h-auto max-w-[150px]"
 					/>
 					<button
 						type="button"
