@@ -33,7 +33,9 @@ const CharactersSection = () => {
 	const [screenSize, setScreenSize] = useState("desktop");
 	const prevRef = useRef<HTMLButtonElement>(null);
 	const nextRef = useRef<HTMLButtonElement>(null);
-	const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
+	const [_swiperInstance, setSwiperInstance] = useState<SwiperType | null>(
+		null,
+	);
 
 	useEffect(() => {
 		const updateSwiperConfig = () => {

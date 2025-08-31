@@ -7,11 +7,21 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-const Animations = ({ children, animateOnScroll = true, delay = 0 }: any) => {
+interface AnimationsProps {
+	children: React.ReactNode;
+	animateOnScroll?: boolean;
+	delay?: number;
+}
+
+const Animations = ({
+	children,
+	animateOnScroll = true,
+	delay = 0,
+}: AnimationsProps) => {
 	const containerRef = useRef(null);
-	const elementRef = useRef([]);
-	const splitRef = useRef([]);
-	const lines = useRef([]);
+	const elementRef = useRef<HTMLElement[]>([]);
+	const splitRef = useRef<any[]>([]);
+	const lines = useRef<HTMLElement[]>([]);
 	const [isReady, setIsReady] = useState(false);
 
 	// Hide content initially with CSS
@@ -29,9 +39,9 @@ const Animations = ({ children, animateOnScroll = true, delay = 0 }: any) => {
 			elementRef.current = [];
 			lines.current = [];
 
-			let elements = [];
+			let elements: HTMLElement[] = [];
 			if (containerRef.current.hasAttribute("data-copy-wrapper")) {
-				elements = Array.from(containerRef.current.children);
+				elements = Array.from(containerRef.current.children) as HTMLElement[];
 			} else {
 				elements = [containerRef.current];
 			}
