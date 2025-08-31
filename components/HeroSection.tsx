@@ -18,7 +18,7 @@ const HeroSection = () => {
 					<div className="col-span-6 xl:col-span-5 lg:pt-20 pb-[200px] sm:pb-[160px] lg:pb-16 xl:pb-32 flex flex-col max-lg:items-center max-lg:justify-center">
 						<Animations delay={0.5}>
 							<h1
-								className="text-white text-[40px] md:text-5xl xl:text-[64px] uppercase pb-5 sm:pb-6 xl:pb-8 lg:max-w-[620px] max-lg:text-center overflow-hidden text-pretty"
+								className="text-white text-[44px] md:text-5xl xl:text-[64px] uppercase pb-5 sm:pb-6 xl:pb-8 lg:max-w-[620px] max-lg:text-center overflow-hidden text-balance"
 								id="heading"
 							>
 								Хаос, забава и хумор. спакувано во една кутија!
