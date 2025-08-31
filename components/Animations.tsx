@@ -18,7 +18,7 @@ const Animations = ({
 	animateOnScroll = true,
 	delay = 0,
 }: AnimationsProps) => {
-	const containerRef = useRef<HTMLElement>(null);
+	const containerRef = useRef<HTMLDivElement>(null);
 	const elementRef = useRef<HTMLElement[]>([]);
 	const splitRef = useRef<SplitText[]>([]);
 	const lines = useRef<HTMLElement[]>([]);
@@ -108,13 +108,11 @@ const Animations = ({
 	);
 
 	if (React.Children.count(children) === 1 && React.isValidElement(children)) {
-		return React.cloneElement(
-			children as React.ReactElement<React.HTMLAttributes<HTMLElement>>,
-			{
-				ref: containerRef,
-				style: { visibility: isReady ? "visible" : "hidden" },
-			},
-		);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		return React.cloneElement(children as any, {
+			ref: containerRef,
+			style: { visibility: isReady ? "visible" : "hidden" },
+		});
 	}
 
 	return (
