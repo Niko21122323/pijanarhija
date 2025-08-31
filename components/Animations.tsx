@@ -61,7 +61,8 @@ const Animations = ({
 				const textIndent = computedStyle.textIndent;
 				if (textIndent && textIndent !== "0px") {
 					if (split.lines.length > 0) {
-						split.lines[0].style.paddingLeft = textIndent;
+						const firstLine = split.lines[0] as HTMLElement;
+						firstLine.style.paddingLeft = textIndent;
 					}
 					element.style.textIndent = "0";
 				}
