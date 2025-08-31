@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IoClose } from "react-icons/io5";
-import Logo from "../public/assets/logo.svg";
+import Logo from "../public/assets/logo.png";
 import Button from "./Button";
 
 const Navbar = () => {
@@ -95,11 +95,7 @@ const Navbar = () => {
 				<div className="container mx-auto px-4 lg:px-6">
 					<div className="flex items-center justify-between py-8">
 						<Link href="/">
-							<Image
-								src={Logo}
-								alt="company logo"
-								className="max-w-[150px] xl:max-w-[200px] h-auto"
-							/>
+							<Image src={Logo} alt="company logo" />
 						</Link>
 						<div className="flex items-center gap-6 xl:gap-12 max-lg:hidden">
 							{navLink.map((link) => (
@@ -158,11 +154,7 @@ const Navbar = () => {
 				} overflow-hidden`}
 			>
 				<div className="flex gap-10 px-6 py-10 items-center justify-between">
-					<Image
-						src={Logo}
-						alt="company logo"
-						className="h-auto max-w-[150px]"
-					/>
+					<Image src={Logo} alt="company logo" />
 					<button
 						type="button"
 						onClick={() => setIsMobileMenuOpen(!isMobileMebuOpen)}
