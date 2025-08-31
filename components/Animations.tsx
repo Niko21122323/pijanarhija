@@ -108,10 +108,13 @@ const Animations = ({
 	);
 
 	if (React.Children.count(children) === 1 && React.isValidElement(children)) {
-		return React.cloneElement(children as React.ReactElement<any>, {
-			ref: containerRef,
-			style: { visibility: isReady ? "visible" : "hidden" },
-		});
+		return React.cloneElement(
+			children as React.ReactElement<React.HTMLAttributes<HTMLElement>>,
+			{
+				ref: containerRef,
+				style: { visibility: isReady ? "visible" : "hidden" },
+			},
+		);
 	}
 
 	return (
