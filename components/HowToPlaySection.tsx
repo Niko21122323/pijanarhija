@@ -14,37 +14,37 @@ const howToPlayData: HowToPlay[] = [
   {
     id: 1,
     number: "1",
-    text: "Секој треба да има пијачка пред себе. Ставете го шпилот на срединa со лицето на картите надолу.",
+    text: "Шпилот стави го во средина со лицето надолу.",
   },
   {
     id: 2,
     number: "2",
-    text: "Прв почнува играчот кому најбрзо му се ближи роденден. Кругот се движи по насока на часовникот.",
+    text: "Кругот се движи во насока на часовникот, а прв почнува на овој кој најбргу му се ближи роденден.",
   },
   {
     id: 3,
     number: "3",
-    text: "Играчот влече карта, ја чита на глас, и ја остава со лицето нагоре одма до шпилот. Играчот го прави го напишаното на картата!",
+    text: "Извлечи карта. Прочитај ја на глас. Направи го тоа што го кажува картата.",
   },
   {
     id: 4,
     number: "4",
-    text: "Кога ќе се потроши шпилот, следува гласање: „Кој највеќе испи оваа партија?“. Најгласаниот е победникот. Ако има двајца — пиење на екс. Кој прв испие станува Мастер Пијанархистот!",
+    text: "Оној кој најмногу ке испие на крај ја добива титулата “Пијанархист”.",
   },
   {
     id: 5,
     number: "5",
-    text: "Ако има двајца со исто гласови се прави дуел: Пиење на Екс! Победникот ја добива титулата!",
+    text: "Дополнитени правила во правилникот на самата игра.",
   },
 ];
 
 const HowToPlaySection = () => {
   return (
     <section className="py-16 md:py-24 lg:py-36" id="како-се-игра">
-      <div className="container mx-auto px-4 lg:px-6 max-w-[800px]">
+      <div className="container mx-auto px-4 lg:px-6 max-w-[700px]">
         <div className="relative lg:w-fit">
           <Animations delay={0.3}>
-            <h2 className="uppercase text-dark text-[40px] md:text-5xl xl:text-[60px] max-w-[383px]">
+            <h2 className="uppercase text-dark max-w-[383px]">
               Како се игра пијандисани?
             </h2>
 
@@ -62,14 +62,16 @@ const HowToPlaySection = () => {
         <div className="grid grid-cols-1 gap-8 pt-10 lg:pt-20">
           {howToPlayData.map((data) => (
             <div key={data.id} className="flex items-center gap-4 lg:gap-6">
-              <div className="size-20 lg:size-[90px] flex items-center flex-shrink-0 justify-center bg-accent rounded-md md:rounded-2xl xl:rounded-[22px]">
+              <div className="size-[36px] sm:size-[55px] flex items-center flex-shrink-0 justify-center bg-accent rounded-md md:rounded-2xl xl:rounded-[22px]">
                 <Animations delay={0.2}>
-                  <h6 className="text-white text-4xl">{data.number}</h6>
+                  <h6 className="text-white text-xl sm:text-4xl">
+                    {data.number}
+                  </h6>
                 </Animations>
               </div>
 
               <Animations delay={0.3}>
-                <p className="text-[#333333]">{data.text}</p>
+                <p className="text-[#333333] text-balance">{data.text}</p>
               </Animations>
             </div>
           ))}

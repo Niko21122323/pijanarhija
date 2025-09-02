@@ -14,11 +14,23 @@ import card6 from "../public/assets/cards/6.png";
 import card7 from "../public/assets/cards/7.png";
 import card8 from "../public/assets/cards/8.png";
 import card9 from "../public/assets/cards/9.png";
+import cardEmpty from "../public/assets/cards/empty.png";
 import swiperIcon from "../public/assets/swipe-icon.svg";
 import Animations from "./Animations";
 import ImageAnimations from "./ImageAnimations";
 
-const cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9];
+const cards = [
+  card1,
+  card2,
+  card3,
+  card4,
+  card5,
+  card6,
+  card7,
+  card8,
+  card9,
+  cardEmpty,
+];
 
 const CharactersSection = () => {
   const [swiperConfig, setSwiperConfig] = useState({
@@ -91,7 +103,7 @@ const CharactersSection = () => {
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col items-center justify-center pb-12 lg:pb-14">
             <Animations delay={0.5}>
-              <h2 className="text-light-100 text-[40px] md:text-5xl xl:text-[60px] text-center uppercase pb-5 max-sm:max-w-[322px]">
+              <h2 className="text-light-100 text-center uppercase pb-5 max-sm:max-w-[322px]">
                 Запознај ги Карактерите
               </h2>
             </Animations>

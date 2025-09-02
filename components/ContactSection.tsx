@@ -52,7 +52,7 @@ const ContactSection = () => {
           </div>
           <div className="">
             <Animations delay={0.3}>
-              <h2 className="text-[40px] md:text-5xl xl:text-[60px] text-dark pb-6 uppercase">
+              <h2 className="text-dark pb-6 uppercase">
                 Доста беа досадни вечери!
               </h2>
             </Animations>

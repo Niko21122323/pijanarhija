@@ -36,9 +36,7 @@ const WhatYouGet = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10">
           <div className="lg:col-span-5">
             <Animations delay={0.3}>
-              <h2 className="uppercase text-light-100 text-[40px] md:text-5xl xl:text-[60px] pb-12">
-                Што добиваш?
-              </h2>
+              <h2 className="uppercase text-light-100 pb-12">Што добиваш?</h2>
             </Animations>
             <div className="flex flex-col gap-4">
               {whatYouGetData.map((data: WhatYouGet) => (

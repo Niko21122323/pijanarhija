@@ -19,7 +19,7 @@ const SponsorSection = () => {
           </div>
           <div className="lg:col-span-8 flex flex-col max-lg:items-center order-1 lg:order-2">
             <Animations delay={0.3}>
-              <h3 className="text-dark text-4xl xl:text-[52px] uppercase pb-3 max-lg:text-center">
+              <h3 className="text-dark uppercase pb-3 max-lg:text-center">
                 Официјален бренд парнер & Спонзор
               </h3>
             </Animations>

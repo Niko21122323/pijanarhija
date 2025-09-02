@@ -3,12 +3,14 @@ import Animations from "./Animations";
 interface InfoProps {
   id: number;
   text: string;
+  bold?: string;
 }
 
 const shippingData: InfoProps[] = [
   {
     id: 1,
-    text: "ДА, БЕСПЛАТНА ДОСТАВА!",
+    text: "ДА, ",
+    bold: "БЕСПЛАТНА ДОСТАВА!",
   },
   {
     id: 2,
@@ -23,7 +25,8 @@ const shippingData: InfoProps[] = [
 const priceData: InfoProps[] = [
   {
     id: 1,
-    text: "Играта + достава е само 690 ден.",
+    text: "Играта + достава е ",
+    bold: "само 690 ден.",
   },
   {
     id: 2,
@@ -42,15 +45,18 @@ const InfoSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 max-w-[1200px] mx-auto">
           <div className="lg:pr-16 xl:pr-[92px] lg:border-r lg:border-dark">
             <Animations delay={0.3}>
-              <h2 className="text-[40px] md:text-5xl xl:text-[60px] text-accent pb-6 uppercase">
-                достава имате?
-              </h2>
+              <h2 className="text-accent pb-6 uppercase">достава имате?</h2>
             </Animations>
             <ul className="list-disc flex flex-col gap-1 pl-5">
               {shippingData.map((data: InfoProps) => (
                 <li key={data.id} className="text-dark">
                   <Animations delay={0.3}>
-                    <p className="text-[#333333]">{data.text}</p>
+                    <p className="text-[#333333]">
+                      {data.text}{" "}
+                      {data.bold && (
+                        <span className="font-semibold">{data.bold}</span>
+                      )}
+                    </p>
                   </Animations>
                 </li>
               ))}
@@ -58,15 +64,18 @@ const InfoSection = () => {
           </div>
           <div className="lg:pl-16 xl:pl-[92px]">
             <Animations delay={0.3}>
-              <h2 className="text-[40px] md:text-5xl xl:text-[60px] text-accent pb-6 uppercase">
-                а ЦЕНАта?
-              </h2>
+              <h2 className="text-accent pb-6 uppercase">а ЦЕНАта?</h2>
             </Animations>
             <ul className="list-disc flex flex-col gap-1 pl-5">
               {priceData.map((data: InfoProps) => (
                 <li key={data.id} className="text-dark">
                   <Animations delay={0.3}>
-                    <p className="text-[#333333]">{data.text}</p>
+                    <p className="text-[#333333]">
+                      {data.text}{" "}
+                      {data.bold && (
+                        <span className="font-semibold">{data.bold}</span>
+                      )}
+                    </p>
                   </Animations>
                 </li>
               ))}
